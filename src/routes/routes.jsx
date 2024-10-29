@@ -2,11 +2,15 @@ import React, { Children, lazy, Suspense } from "react";
 import { useRoutes } from "react-router-dom";
 import Layout from "../layout/Layout";
 import { Box, CircularProgress } from "@mui/material";
+
 const Authentication = lazy(() => import("../pages/Authentication"));
 const SignUp = lazy(() => import("../components/SignUp/SignUp"));
 const Login = lazy(() => import("../components/Login/Login"));
 const ForgotPassword = lazy(() =>import("../components/ForgotPassword/ForgotPassword"));
-const ResetPassword = lazy(() => import("../components/SignUp/ResetPassword"));
+const ResetPassword = lazy(() => import("../components/ResetPassword/ResetPassword"));
+const Profile = lazy(() => import("../components/Profile/Profile"));
+const Team = lazy(() => import("../components/Team/Team"));
+const Feedback = lazy(() => import("../components/Feedback/Feedback"));
 
 const Routes = () => {
   const routes = useRoutes([
@@ -16,54 +20,59 @@ const Routes = () => {
       children: [
         {
           path: "/",
-          element: (
-            <Suspense fallback={<LoadingFallback />}>
+          element: 
               <SignUp />
-            </Suspense>
-          ),
         },
         {
           path: "login",
-          element: (
-            <Suspense fallback={<LoadingFallback />}>
+          element: 
               <Login />
-            </Suspense>
-          ),
         },
         {
           path: "forgot-password",
-          element: (
-            <Suspense fallback={<LoadingFallback />}>
+          element: 
               <ForgotPassword />
-            </Suspense>
-          ),
         },
         {
           path: "reset-password",
-          element: (
-            <Suspense>
+          element: 
               <ResetPassword />
-            </Suspense>
-          ),
         },
       ],
     },
 
     {
       path: "/dashboard",
-      element: (
-        <Suspense fallback={<LoadingFallback />}>
-          <Layout />
-        </Suspense>
-      ),
-      // Children={}
+      element: 
+          <Layout />,
+      children:[
+        {
+          path:"profile",
+          element:
+          <Profile/>
+        },
+        {
+          path:"team",
+          element:
+          <Team/>
+        },
+        {
+          path:"feedback",
+          element:
+          <Feedback/>
+        }
+      ]
     },
     {
       path: "*",
       element: <h2>404- Page Not Found</h2>,
     },
   ]);
-  return routes;
+  return (
+    <Suspense fallback={<LoadingFallback/>}>
+      {routes}
+    </Suspense>
+  );
 };
 
 const LoadingFallback = () => {

@@ -1,0 +1,43 @@
+{
+    "Teams" :[ 
+    {
+        "id" : 1,
+        "Name": "George Fernandes",
+        "Designation" : "Visual Designer",
+        "Department" : "Design",
+        "Reporting to": "Steven",
+        "Role" : "Employee",
+        "Email" : "georgefernandes1998@gmail.com",
+        "Experience" : "3 Yrs 4 Mon"
+    },
+    {
+        "id" : 2,
+        "Name": "Emilie Clarke",
+        "Designation" : "Visual Designer",
+        "Department" : "Design",
+        "Reporting to": "Alicia Dsouza",
+        "Role" : "Employee",
+        "Email" : "emilieclarke@gmail.com",
+        "Experience" : "3 Yrs 4 Mon"
+    },
+    {
+        "id" : 3,
+        "Name": "Jason Dominic",
+        "Designation" : "Full stack Developer",
+        "Department" : "Engineering",
+        "Reporting to": "Steven",
+        "Role" : "Manager",
+        "Email" : "jasondominic@gmail.com",
+        "Experience" : "3 Yrs 4 Mon"
+    },
+    {
+        "id" : 4,
+        "Name": "Bruce Banner",
+        "Designation" : "Full stack Developer",
+        "Department" : "Engineering",
+        "Reporting to": "steven",
+        "Role" : "Admin",
+        "Email" : "brucebanner@gmail.com",
+        "Experience" : "3 Yrs 4 Mon"
+    }
+]}

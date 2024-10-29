@@ -2,6 +2,8 @@ import './App.css'
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from './routes/routes';
 import { colors, createTheme, ThemeProvider } from '@mui/material';
+import { Provider } from 'react-redux';
+import store from './Redux/Store';
 
 function App() {
 
@@ -20,11 +22,13 @@ function App() {
 
   return (
     <>
+    <Provider store={store}>
      <Router>
       <ThemeProvider theme={theme}>
           <Routes/>
           </ThemeProvider>
      </Router>
+     </Provider>
     </>
   )
 }

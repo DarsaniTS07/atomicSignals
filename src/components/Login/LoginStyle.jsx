@@ -1,4 +1,4 @@
-const SignupStyles = {
+const LoginStyles = {
     containerBox: {
       maxWidth: "21rem",
       width: "100%",
@@ -23,28 +23,6 @@ const SignupStyles = {
       display: "flex",
       paddingLeft: "10px",
     },
-    buttonStyle: {
-      textTransform: 'none',
-      backgroundColor: "#F8F8F8",
-      color: "#353448",
-      borderRadius:'7px',
-      marginTop: "15px",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "start",
-      gap: 1,
-      textAlign: "center"
-    },
-    buttonText: {
-      fontSize: "13px", 
-      fontWeight: "500",
-      flex: 1
-    },
-    dividerText: {
-      margin: "10px",
-      color: "#71707E",
-      fontSize: "14px",
-    },
     workEmailLabel: {
       color: "#484759",
       fontSize: "13px",
@@ -52,7 +30,7 @@ const SignupStyles = {
     textFieldInput: {
       padding: 0,
       height: '2rem',
-      width: '20rem',
+      width: '19.2rem',
       marginTop: '10px',
        marginBottom:"4px"
     },
@@ -62,15 +40,12 @@ const SignupStyles = {
       color:"#FFFFFF",
       marginBottom:"7px"
     },
-    loginLinkText: {
-      color: '#71707E',
-      fontSize: "13px",
-    },
     loginLink: {
       color: "#353448",
-      fontWeight: "600",
+      fontWeight: "500",
+      fontSize:"14px"
     },
   };
   
-  export default SignupStyles;
+  export default LoginStyles;
   
