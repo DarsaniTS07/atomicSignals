@@ -159,9 +159,9 @@ const AddMemberDrawer = ({ open, onClose, onAddMember }) => {
               </Box>
             </Box>
 
-            <Box sx={{ display: 'flex', justifyContent: 'space-around', padding: '17px', gap: "10px" ,marginTop:'rem'}}>
-              <Button variant="contained" onClick={handleAddMember} sx={{ width: "50%", color: '#FFFFFF' }}>Add Member</Button>
-              <Button variant="outlined" onClick={onClose} sx={{ width: "50%" }}>Cancel</Button>
+            <Box sx={{ display: 'flex', justifyContent: 'space-around', padding: '17px', gap: "10px" ,marginTop:'4rem'}}>
+              <Button variant="contained" onClick={handleAddMember} sx={{ width: "50%", color: '#FFFFFF', textTransform:'none' }}>Add Member</Button>
+              <Button variant="outlined" onClick={onClose} sx={{ width: "50%",textTransform:'none' }}>Cancel</Button>
             </Box>
           </Box>
         </Box>
